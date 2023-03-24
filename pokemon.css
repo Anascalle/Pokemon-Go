@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    .poke{
+    font-family: 'Poppins', sans-serif;
+    margin: 0 20px;
+    float: left;
+    
+    line-height: 70px;
+    font-weight: bold;
+    font-size: 25px;
+}
+header nav a{
+
+    color: aliceblue;
+
+}
+.fav{
+    font-family: 'Poppins', sans-serif;
+
+    margin: 0 15px;
+    float: right;
+   margin-top: 20px;
+    border-radius: 3px;
+
+}
+.ini{
+    font-family: 'Poppins', sans-serif;
+    margin: 0 15px;
+    float:right;
+
+    margin-top: 20px;
+    border-radius: 3px;
+
+
+}
+
+
+ nav {
+   background-color: #3B4CCA;
+ height: 70px;
+   width: 100%;
+   top: 0;
+   left: 0;
+
+   position: fixed;
+
+}
+
+.menu_pokebola{
+width: 50px;
+object-fit: content;
+
+padding-top:10px;
+margin-left: 30px;
+float: left;
+line-height: 70px;
+}
+.menu_avatar{
+width: 45px;
+object-fit: content;
+float: right;
+padding-top: 11px;
+align-items: center;
+margin-right: 30px;
+}
+
+
+.fav:hover{
+    background-color: #fff;
+    color: #3B4CCA;
+    transition: .5s;
+  padding: 0px 3px;
+
+
+
+}
+.ini:hover{
+    background-color: #fff;
+    color: #3B4CCA;
+    transition: .5s;
+    padding: 0px 3px;
+
+}
+
+.header{
+    position: absolute;
+    z-index: 2;
+}
+
+body{
+    background-color: #DDE1FF;
+    height: 90vw;
+    font-family: poppins;
+}
+
+.box{
+    width: 900px;
+    height: 1050px;
+    background-color: white;
+   /* margin-left: 250px;*/
+
+    border-radius: 60px;
+    margin: 0 auto;
+    margin-top: 300px;
+
+
+}
+
+.pokemon{
+    position: absolute;
+    margin-top: -240px;
+    margin-left: 540px;
+    align-items: center;
+   
+}
+
+.p1{
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 300px;
+    width: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nombre{
+    font-size: 90px;
+    font-family: ubuntu;
+}
+
+.espacio1{
+    display: flex;
+    flex-direction: row;
+  
+
+}
+
+.tipo{
+    display: flex;
+    flex-direction: row;
+    background-color: #DDE1FF;
+    margin-left: 80px;
+    border-radius: 20px;
+    padding: 20px;
+    height: 60px;
+}
+
+.numero{
+    background-color: #DDE1FF;
+    border-radius: 20px;
+
+}
+
+#numero{
+    margin-top: 20px;
+   
+    width: 100px;
+    text-align: center;
+}
+
+.icono1{
+    height: 40px;
+    margin-top: -8px;
+}
+
+.icono2{
+    position: absolute;
+}
+
+#estrella{
+    margin-left: 900px;
+    margin-top: -5px;
+}
+
+#flecha{
+    margin-left: 350px;
+    margin-top: -100px;
+}
+
+.evoluciones, .descripcion{
+    margin-left: -250px;
+    margin-top: 100px;
+    font-size: 30px;
+    width: 800px;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.debilidad{
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+}
+
+#texto{
+    margin-top: 6px;
+    margin-left: 10px;
+}
+
+.evolucion{
+    width: 150px;
+    margin-left: 10px;
+
+}
+
+.espacio2{
+ margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+  justify-content: center;
+}
+
+.espacio3{
+    margin-right: -5px;
+}
+
+.flecha2{
+    margin-left: 50px;
+    margin-top: 70px;
+}
+
+.texto3{
+ text-align: center;
+
+}
+
+
