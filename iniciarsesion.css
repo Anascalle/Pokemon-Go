@@ -6,67 +6,67 @@
     list-style: none;
     }
     body{
-       
+
        font-size: 15px;
-      
+
     }
     .poke{
         font-family: 'Poppins', sans-serif;
         margin: 0 20px;
-      
-     
+
+
         line-height: 70px;
         font-weight: bold;
         font-size: 25px;
     }
     header nav a{
-           
+
         color: aliceblue;
-    
+
     }
     .fav{
         font-family: 'Poppins', sans-serif;
-       
+
         margin: 0 15px;
         float: right;
        margin-top: 20px;
         border-radius: 3px;
-    
+
     }
     .ini{
         font-family: 'Poppins', sans-serif;
         margin: 0 30px;
         float:right;
-        
+
         margin-top: 20px;
         border-radius: 3px;
-    
-    
+
+
     }
     .ini:hover{
         background-color: #fff;
         color: #3B4CCA;
         transition: .5s;
         padding: 0px 3px;
-        
+
     }
-    
-    
+
+
      nav {
        background-color: #3B4CCA;
      height: 70px;
        width: 100%;
        top: 0;
        left: 0;
-    
+
        position: fixed;
-       
+
     }
-    
+
     .menu_pokebola{
     width: 50px;
     object-fit: content;
-    
+
     padding-top:10px;
     margin-left: 30px;
     float: left;
@@ -80,7 +80,7 @@
     align-items: center;
     margin-right: 30px;
     }
-    
+
 
     .img1{
         width: 40px;
@@ -135,17 +135,27 @@
     .iniciar{
         font-family: 'poppins', sans-serif;
         width: 1000px;
-        margin-left:190px;
+
+       margin: 100px auto;
 
     }
 
-    .nombrecontra{
+    .nombre{
         padding: 10px;
         margin-top: 20px;
         width: 300px;
         margin-left: -20px;
         border-radius: 10px;
-     
+
+    }
+
+    .contra{
+        padding: 10px;
+        margin-top: 20px;
+        width: 300px;
+        margin-left: -20px;
+        border-radius: 10px;
+
     }
 
     #nombre{
@@ -196,7 +206,7 @@
     margin-left: 100px;
 }
 
-#boton2{
+ .activarButton{
     border-radius: 15px;
     background-color: #FF1C1C;
     color: white;
@@ -256,19 +266,25 @@
 .remember{
     margin-right: 10px;
 }
-#boton2:hover{
+/*#boton2:hover{
     background-color: #3B4CCA;
     color: #fff;
     transition: .5s;
 
-}
-#boton2:hover{
-    background-color: #3B4CCA;
-    color: #fff;
-    transition: .5s;
+}*/
 
+.deButton{
+    background-color: rgb(182, 182, 182);
+    color: white;
+    border-radius: 15px;
+    border:transparent;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: 120px;
+    margin-top: 30px;
+    height: 40px;
+     }
 
-}
 .abrircon:hover{
     background-color: #3B4CCA;
     color: #fff;
