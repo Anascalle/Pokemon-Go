@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Pokedexestilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/9c5d1260f8.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9c5d1260f8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/9c5d1260f8.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/9c5d1260f8.js" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
+<body></head>
     <title>Pokédex</title>
 </head>
 
@@ -27,10 +33,11 @@
     <div class="contenedor">
     <nav>
     
-        <a href="Usuario.html"><img src="Imagenes Barra/Usuario-removebg-preview.png" alt="Usuario"class="menu_avatar"></a>
-   <img src="Imagenes/Pokebola.png" alt="Pokebola" class="menu_pokebola">
+        <a href="Usuario.html"><img src="Imagenes Barra/Usuario-removebg-preview.png" alt="Usuario"class="menu_avatar" ></a>
+   <img src="Imagenes Barra/Pokebola.png" alt="Pokebola" class="menu_pokebola">
    
     <li><a class= "fav"href="Favoritos.html">Favoritos</a></li>
+
   
     <li> <a class="poke" href="Inicio.html">Pokédex Go</a></li>
 </nav>
@@ -41,326 +48,30 @@
         <h1 class="banner_titulo"> Pokédex</h1>
     
     </div>
-    <form class="form">
-       
-        <div class="input">
-            <div class="buscar">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="search"class= "box"placeholder="Buscar nombre de pokemon" >
+    <div class="input">
+        <div class="buscar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+   
+    <input type="text" id="search-input" placeholder="Buscar el nombre de pokemon...">
+
+
+
+        <div class="card-container" id="container">
             
-        </div>
-        <ul class="menu-horizontal">
-			
-			<li>
-				<a href="#">Tipos<i class="fa-regular fa-angle-down"></i></a>
-				<ul class="menu-vertical">
-                    <li><a href="#"></a>Normal</li>
-                    <li><a href="#"></a>Fuego</li>
-                    <li><a href="#"></a>Agua</li>
-                    <li><a href="#"></a>Eléctrico</li>
-                    <li><a href="#"></a>Planta</li>
-                    <li><a href="#"></a>Hielo</li>
-                    <li><a href="#"></a>Lucha</li>
-                    <li><a href="#"></a>Veneno</li>
-                    <li><a href="#"></a>Hada</li>
-                    <li><a href="#"></a>Tierra</li>
-                    <li><a href="#"></a>Volados</li>
-                    <li><a href="#"></a>Bicho</li>
-                    <li><a href="#"></a>Psíquico</li>
-                    <li><a href="#"></a>Roca</li>
-                    <li><a href="#"></a>Fantasma</li>
-                    <li><a href="#"></a>Dragón</li>
-                    <li><a href="#"></a>Siniestro</li>
-                    <li><a href="#"></a>Acero</li>
-
-				</ul>
-			</li>
-		
-		</ul>
-      
-
         </div>
       
-    </div>  
-            
-        </div>
-    </div>
+        <p id="no-results-message" class="hidden">No se encontraron resultados</p>
+
     
-</form>
-<main>
-<div id="todos">
-    <div id="todos">
-        <div class="pokemon-todos" id="listaPokemon">
-       
-        <div class="pokemon">
-            <div class="menu">
-                <i class="fa-solid fa-plus"></i>
-            </div>
-            <div class="nombre_pokemon">
-               
-                <h2 class="pokemon-nombre">bulbasaur</h2></label>
-            </div>
-    <div class="pokemon-imagen">
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="bulbasaur">
-    </div>
-    <div class="pokemon-info">
-        <div class="nombre-contenedor">
-            <p class="pokemon-id">N°1</p>
-            
-        </div>
-        <div class="pokemon-tipos">
-            <p class="grass tipo">Planta/Veneno</p>
-        </div>
-        
-    </div>
-</div> <div class="pokemon">
-    <div class="menu">
-        <i class="fa-solid fa-plus"></i>
-    </div>
-    <div class="nombre_pokemon">
-       
-        <h2 class="pokemon-nombre">Nidorinan</h2></label>
-    </div>
-<div class="pokemon-imagen">
-<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/30.png" alt="Nidorina">
-</div>
-<div class="pokemon-info">
-<div class="nombre-contenedor">
-    <p class="pokemon-id">N°30</p>
     
-</div>
-<div class="pokemon-tipos">
-    <p class="grass tipo">Veneno</p>
-</div>
-    </div>
-</div> <div class="pokemon">
-    <div class="menu">
-        <i class="fa-solid fa-plus"></i>
-    </div>
-    <div class="nombre_pokemon">
-       
-        <h2 class="pokemon-nombre">Cleffa</h2></label>
-    </div>
-<div class="pokemon-imagen">
-<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/173.png" alt="Cleffa">
-</div>
-<div class="pokemon-info">
-<div class="nombre-contenedor">
-    <p class="pokemon-id">N°173</p>
-    
-</div>
-<div class="pokemon-tipos">
-    <p class="grass tipo">Hada</p>
-</div>
-        
-    </div>
-</div><div class="pokemon">
-    <div class="menu">
-        <i class="fa-solid fa-plus"></i>
-    </div>
-    <div class="nombre_pokemon">
-       
-        <h2 class="pokemon-nombre">Shellder</h2></label>
-    </div>
-<div class="pokemon-imagen">
-<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/90.png" alt="Shellder">
-</div>
-<div class="pokemon-info">
-<div class="nombre-contenedor">
-    <p class="pokemon-id">N°90</p>
-    
-</div>
-<div class="pokemon-tipos">
-    <p class="grass tipo">Agua</p>
-</div>
 
-      
-        
-    </div>
+        <script src="./js/data.js"></script>
+        <script src="./js/pokemon.js"></script>
+        <script src="./js/index.js"></script>
+        <script src="./js/buscador.js"></script>
 
-
-    </div>
-
-    </div>
-    <div class="pokemon-todos" id="listaPokemon">
-       
-        <div class="pokemon">
-            <div class="menu">
-                <i class="fa-solid fa-plus"></i>
-            </div>
-            <div class="nombre_pokemon">
-               
-                <h2 class="pokemon-nombre">spewpa</h2></label>
-            </div>
-    <div class="pokemon-imagen">
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/665.png" alt="spewpa">
-    </div>
-    <div class="pokemon-info">
-        <div class="nombre-contenedor">
-            <p class="pokemon-id">N°0665</p>
-            
-        </div>
-        <div class="pokemon-tipos">
-            <p class="grass tipo">Bicho</p>
-        </div>
-        
-    </div>
-</div> <div class="pokemon">
-    <div class="menu">
-        <i class="fa-solid fa-plus"></i>
-    </div>
-    <div class="nombre_pokemon">
-       
-        <h2 class="pokemon-nombre">charmelon</h2></label>
-    </div>
-<div class="pokemon-imagen">
-<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png" alt="charmelon">
-</div>
-<div class="pokemon-info">
-<div class="nombre-contenedor">
-    <p class="pokemon-id">N°5</p>
-    
-</div>
-<div class="pokemon-tipos">
-    <p class="grass tipo">fuego</p>
-</div>
-    </div>
-</div> <div class="pokemon">
-    <div class="menu">
-        <i class="fa-solid fa-plus"></i>
-    </div>
-   <a href="pokemon.html"><div class="nombre_pokemon">
-       
-        <h2 class="pokemon-nombre">Pikachu</h2></label>
-    </div>
-<div class="pokemon-imagen">
-<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pikachu">
-</div>
-<div class="pokemon-info">
-<div class="nombre-contenedor">
-    <p class="pokemon-id">N°25</p>
-    
-</div>
-<div class="pokemon-tipos">
-    <p class="grass tipo">Eléctrico</p>
-</div></a> 
-        
-    </div>
-</div><div class="pokemon">
-    <div class="menu">
-        <i class="fa-solid fa-plus"></i>
-    </div>
-    <div class="nombre_pokemon">
-       
-        <h2 class="pokemon-nombre">meowth</h2></label>
-    </div>
-<div class="pokemon-imagen">
-<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/52.png" alt="meowth">
-</div>
-<div class="pokemon-info">
-<div class="nombre-contenedor">
-    <p class="pokemon-id">N°52</p>
-    
-</div>
-<div class="pokemon-tipos">
-    <p class="grass tipo">normal</p>
-</div>
-
-   
-    </div>
-
-    </div>
-</div>
-<div class="pokemon-todos" id="listaPokemon">
-       
-    <div class="pokemon">
-        <div class="menu">
-            <i class="fa-solid fa-plus"></i>
-        </div>
-        <div class="nombre_pokemon">
-           
-            <h2 class="pokemon-nombre">Cubone</h2></label>
-        </div>
-<div class="pokemon-imagen">
-    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/104.png" alt="Cubone">
-</div>
-<div class="pokemon-info">
-    <div class="nombre-contenedor">
-        <p class="pokemon-id">N°104</p>
-        
-    </div>
-    <div class="pokemon-tipos">
-        <p class="grass tipo">Tierra</p>
-    </div>
-    
-</div>
-</div> <div class="pokemon">
-<div class="menu">
-    <i class="fa-solid fa-plus"></i>
-</div>
-<div class="nombre_pokemon">
-   
-    <h2 class="pokemon-nombre">horsea</h2></label>
-</div>
-<div class="pokemon-imagen">
-<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/116.png" alt="horsea">
-</div>
-<div class="pokemon-info">
-<div class="nombre-contenedor">
-<p class="pokemon-id">N°116</p>
-
-</div>
-<div class="pokemon-tipos">
-<p class="grass tipo">Agua</p>
-</div>
-</div>
-</div> <div class="pokemon">
-<div class="menu">
-    <i class="fa-solid fa-plus"></i>
-</div>
-<div class="nombre_pokemon">
-   
-    <h2 class="pokemon-nombre">mew</h2></label>
-</div>
-<div class="pokemon-imagen">
-<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png" alt="mew">
-</div>
-<div class="pokemon-info">
-<div class="nombre-contenedor">
-<p class="pokemon-id">N°151</p>
-
-</div>
-<div class="pokemon-tipos">
-<p class="grass tipo">Psíquico</p>
-</div>
-    
-</div>
-</div><div class="pokemon">
-<div class="menu">
-    <i class="fa-solid fa-plus"></i>
-</div>
-<div class="nombre_pokemon">
-   
-    <h2 class="pokemon-nombre">snorlax</h2></label>
-</div>
-<div class="pokemon-imagen">
-<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png" alt="snorlax">
-</div>
-<div class="pokemon-info">
-<div class="nombre-contenedor">
-<p class="pokemon-id">N°143</p>
-
-</div>
-<div class="pokemon-tipos">
-<p class="grass tipo">normal</p>
-</div>
-</div>
-
-   
-    </div>
-    
-</div>
-
+</body>
+</html>
 
 
 
