@@ -243,4 +243,9 @@ margin: -30px 10px;
   margin: -35px 20px;
 }
 
-  
+i.fas.fa-plus:hover{
+  color: #3B4CCA;
+  transition: .5s;
+  cursor: pointer;
+
+}  
