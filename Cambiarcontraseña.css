@@ -24,15 +24,7 @@
         color: aliceblue;
     
     }
-    .fav{
-        font-family: 'Poppins', sans-serif;
-       
-        margin: 0 15px;
-        float: right;
-       margin-top: 20px;
-        border-radius: 3px;
-    
-    }
+   
     .ini{
         font-family: 'Poppins', sans-serif;
         margin: 0 15px;
@@ -75,15 +67,9 @@
     }
     
     
-    .fav:hover{
-        background-color: #fff;
-        color: #3B4CCA;
-        transition: .5s;
-      padding: 0px 3px;
-    
-    
+  
        
-    }
+    
     .ini:hover{
         background-color: #fff;
         color: #3B4CCA;
@@ -174,15 +160,6 @@
 
     
  
-    
-    
-       
-    
-    
-    
-    
-    
-    
     
     
     
