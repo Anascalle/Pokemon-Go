@@ -42,28 +42,30 @@
             <h1 class="banner_titulo"> Restablecer contraseña</h1>
             <form class="form">
             
-        
+        <form >
         <div class="inputs">
-                    <label for="">Nueva contraseña</label>
-                    <input type="password" class="box" placeholder="Ocho caracteres">
-                    <label for="">Vuelva a escribir la contraseña</label>
-                    <input type="password" class="box" placeholder="Ocho caracteres">
-                    <label for="">Indicios de la contraseña</label>
-                    <input type="password" class="box" placeholder="Indicios para la nueva contraseña">
+                    <label for="">Contraseña Actual</label>
+                    <input type="password" class="box" id="current-password" placeholder="Contraseña Actual">
+                    <label for="">Nueva Contraseña</label>
+                    <input type="password" class="box" id="new-password" placeholder="Nueva contraseña">
+                    <label for="">Vuelva a escribir la nueva contraseña</label>
+                    <input type="password" class="box" id="confirm-password" placeholder="Repita la nueva contraseña">
         </div>
+        
            <div class="boton">
+        </form>
             
 
                     
                      
                   
-               <input type="button" value="Cambiar contraseña" class="button1">
+               <input type="submit"  id="change-password-btn"value="Cambiar contraseña"  class="button1">
                 </label>
                
                </div>
             <div class="pichu">
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/172.png" alt="">
             </div>
-    
+    <script src="./js/Cambiarcontraseña.js"></script>
 </body>
 </html>
