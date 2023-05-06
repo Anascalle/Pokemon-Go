@@ -243,9 +243,48 @@ margin: -30px 10px;
   margin: -35px 20px;
 }
 
-i.fas.fa-plus:hover{
-  color: #3B4CCA;
-  transition: .5s;
-  cursor: pointer;
+.star-icon {
+  color: #ccc;
+}
 
-}  
+.star-icon.clicked {
+  color: yellow;
+}
+
+.menu{
+  position: absolute;
+  top: 100%;
+  left: 80%;
+  background-color: #3B4CCA;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  padding: 2%;
+  padding-right: 4%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+
+.menu-item{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.division{
+  background-color: #fff;
+  height: 2px;
+  width: 110%;
+  border-radius: 20px;
+}
+
+.menu-icon{
+  height: 35px;
+ margin-right: 2%;
+ margin-top: 2%;
+}
+
+#ocultar{
+      display:none
+}
+
+
