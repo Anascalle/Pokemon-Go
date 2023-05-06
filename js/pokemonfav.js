@@ -12,7 +12,7 @@ class Character {
         return `
         <div class="card" onclick="selected(${pos})">
             <p id="nombre">${this.name}</p>
-            <span class="card-icon"><i class="fas fa-trash"></i></i></span> 
+            
             <img src="${this.image}" />
             <p id="numero">N°${this.id.toString().padStart(4, '0')}</p>
             <p id="tiposs">${this.types[0]}/${this.types[1]}</p>
