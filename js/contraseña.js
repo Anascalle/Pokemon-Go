@@ -21,7 +21,7 @@ form.addEventListener('submit', function(event) {
   alert('La contraseña ha sido cambiada con éxito');
   
   // Limpiar campos
-  document.getElementById('current-password').value = '';
+
   document.getElementById('new-password').value = '';
   document.getElementById('confirm-password').value = '';
 });
