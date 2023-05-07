@@ -1,4 +1,3 @@
-
 const form = document.querySelector('form');
 form.addEventListener('submit', function(event) {
   event.preventDefault();
@@ -7,7 +6,11 @@ form.addEventListener('submit', function(event) {
   const confirmPassword = document.getElementById('confirm-password').value;
   
   // Validar campos
-  if (currentPassword === '' || newPassword === '' || confirmPassword === '') {
+  if (currentPassword !== 'Amolospokemones') {
+    alert('La contraseña actual es incorrecta');
+    return;
+  }
+  if (newPassword === '' || confirmPassword === '') {
     alert('Todos los campos son requeridos');
     return;
   }
@@ -19,15 +22,6 @@ form.addEventListener('submit', function(event) {
     alert('La contraseña actual y la nueva contraseña deben ser diferentes');
     return;
   }
-  
-  // Verificar contraseña actual
-  // Aquí puedes hacer una solicitud al servidor para verificar la contraseña actual
-  
-  // Cambiar contraseña
-  // Aquí puedes hacer una solicitud al servidor para cambiar la contraseña
-  
-  // Guardar nueva contraseña en el local storage
-  localStorage.setItem('password', newPassword);
   
   // Mostrar mensaje de éxito
   alert('La contraseña ha sido cambiada con éxito');
