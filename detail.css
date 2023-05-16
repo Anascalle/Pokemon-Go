@@ -10,59 +10,59 @@
     height: 90vw;
     font-family: poppins;
        font-size: 15px;
-      
+
     }
     .poke{
         font-family: 'Poppins', sans-serif;
         margin: 0 20px;
-      
-     
+
+
         line-height: 70px;
         font-weight: bold;
         font-size: 25px;
     }
     header nav a{
- 
+
         color: aliceblue;
-    
+
     }
     .fav{
         font-family: 'Poppins', sans-serif;
-       
+
         margin: 0 15px;
         float: right;
        margin-top: 20px;
         border-radius: 3px;
-    
+
     }
     .ini{
         font-family: 'Poppins', sans-serif;
         margin: 0 15px;
         float:right;
-        
+
         margin-top: 20px;
         border-radius: 3px;
-    
-    
+
+
     }
-    
-    
+
+
      nav {
        background-color: #3B4CCA;
      height: 70px;
        width: 100%;
        top: 0;
        left: 0;
-  
+
        z-index: 2;
        position: fixed;
-       
+
     }
-    
+
     .menu_pokebola{
     width: 50px;
     object-fit: content;
-    
+
     padding-top:10px;
     margin-left: 30px;
     float: left;
@@ -76,50 +76,50 @@
     align-items: center;
     margin-right: 30px;
     }
-    
-    
+
+
     .fav:hover{
         background-color: #fff;
         color: #3B4CCA;
         transition: .5s;
       padding: 0px 3px;
-    
-    
-       
+
+
+
     }
     .ini:hover{
         background-color: #fff;
         color: #3B4CCA;
         transition: .5s;
         padding: 0px 3px;
-        
+
     }
     .pokemon-card {
         width: 900px;
         height: 1100px;
         background-color: white;
-      
-    
+
+
         border-radius: 60px;
         margin: 0 auto;
         margin-top: 300px;
-    
+
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
       }
-      
+
       .image-container {
         display: flex;
         align-items: center;
         margin: 20px;
       }
-      
+
       #image {
         text-align: center;
       }
-      
+
       i.fas.fa-arrow-left{
         font-size: 30px;
         color: white;
@@ -129,12 +129,12 @@
       #name {
         font-size: 90px;
         font-family: ubuntu;
-   
+
         text-transform: capitalize;
-  
-       
+
+
       }
-      
+
       #type {
     display: flex;
     flex-direction: row;
@@ -147,7 +147,7 @@
     height: 50px;
     text-transform: capitalize;
       }
-      
+
      #id{
         display: flex;
         margin-left: 80px;
@@ -161,7 +161,7 @@
         height: 50px;
         text-transform: capitalize;
      }
-      
+
      #id-type {
         display: flex;
         flex-direction: row;
@@ -169,14 +169,14 @@
         justify-content: center;
         margin-top: 10px;
         margin-left: -50px;
-    
+
       }
       .pokemon-card ul {
         margin: 0;
         padding: 0;
         list-style: none;
       }
-      
+
       .pokemon-card li {
         margin-bottom: 5px;
       }
@@ -204,11 +204,11 @@
         font-weight: bold;
         text-transform: capitalize;
       }
-      
+
       #Abilities{
         font-size: 28px;
         font-weight: bold;
-        text-transform: capitalize; 
+        text-transform: capitalize;
       }
 #abilities{
         font-size: 18px;
@@ -220,7 +220,7 @@
         position: absolute;
         padding: 40px;
 
-        left: 20%;
+        left: 25%;
         top:50%;
         transform: translateY(-50%);
         color: #3B4CCA;
@@ -228,16 +228,16 @@
       .star-icon {
         color: #ccc;
         font-size: 70px;
-       right: 25%;
+       right: 27%;
         top:45%;
         position: absolute;
         z-index: 1;
       }
-      
+
       .star-icon.clicked {
         color: #FFDE00;
       }
-      
+
     #dimensiones{
       padding-top: 40px;
     }
@@ -269,31 +269,30 @@
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
   }
-  
-  
+
+
   .menu-item{
       margin-top: 5%;
       margin-bottom: 5%;
   }
-  
+
   .division{
       background-color: #fff;
       height: 2px;
       width: 110%;
       border-radius: 20px;
   }
-  
+
   .menu-icon{
       height: 35px;
      margin-right: 2%;
      margin-top: 2%;
   }
-  
+
   #ocultar{
           display:none
   }
 
-  
-  
-  
-  
+
+
+

@@ -2,7 +2,13 @@ const usernameInput = document.getElementById("nombreInput")
 const passwordInput = document.querySelector('.contra');
 const iniciarSesionBtn = document.getElementById("boton2")
 
+let users = []
 
+if (window.localStorage.getItem("users") === null || window.localStorage.getItem("users") === undefined) {
+  users = []
+} else {
+  users = JSON.parse(window.localStorage.getItem("users"));
+}
 
 function verificarCampos() {
 
@@ -30,16 +36,21 @@ passwordInput.addEventListener('input', ()=>{
 
 iniciarSesionBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  
-  const usuarioValido = 'Pokemon1'; // 'nombreDeUsuario' por el valor correcto
-  
-  const contrasenaValida = 'Amolospokemones'; // 'contrasenaSegura' por el valor correcto
-  
-  if (usernameInput.value === usuarioValido && passwordInput.value === contrasenaValida) {
-    window.location.href = "./Pokedex.html";
-  } else {
+
+  let actualUser = users.find((user)=> {
+    return user.username === usernameInput.value
+  })
+
+  if (actualUser === null || actualUser === undefined){
+    alert("Usuario no registrado");
+
+  }else if (actualUser.password !== passwordInput.value){
     alert("Credenciales inválidas. Inténtalo de nuevo.");
+  } else {
+    window.localStorage.setItem("loggeduser", actualUser)
+    window.location.href = "./Pokedex.html";
   }
+
 });
 
 
