@@ -1,5 +1,8 @@
 const results = data;
 const list = [];
+const listFav = [];
+window.localStorage.setItem("favoritos", JSON.stringify(listFav))
+
 const listContainer = document.getElementById("container");
 
 function getList() {

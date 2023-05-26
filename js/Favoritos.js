@@ -1,4 +1,4 @@
-const results = data;
+const results = JSON.parse(window.localStorage.getItem("favoritos"));
 const list = [];
 const listContainer = document.getElementById("container");
 
@@ -31,3 +31,5 @@ function selected(pos) {
 }
 
 getList();
+
+console.log(results)
