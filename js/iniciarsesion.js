@@ -53,6 +53,8 @@ iniciarSesionBtn.addEventListener("click", (e) => {
     alert("Credenciales inválidas. Inténtalo de nuevo.");
   } else {
     window.localStorage.setItem("loggeduser", actualUser);
+    window.localStorage.setItem("loggedUser", JSON.stringify(actualUser));
     window.location.href = "./Pokedex.html";
+    window.location.href = "./Usuario.html";
   }
 });
