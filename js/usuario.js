@@ -31,3 +31,23 @@ document.getElementById("imagen").appendChild(favoritosboton);
 favoritosboton.onclick = function() {
   window.location.href = "Favoritos.html";
 };
+
+var loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
+if (loggedUser) {
+  var username = loggedUser.username;
+  document.getElementById("H1").textContent = username;
+}
+if (loggedUser) {
+var username = loggedUser.username;
+var usernameWithAt = "@" + username;
+document.getElementById("P").textContent = usernameWithAt;
+}
+
+
+
+// var users = JSON.parse(localStorage.getItem("users"));
+//if (users && users.length > 0) {
+    //var lastUser = users[users.length - 1];
+  //var usernameWithAt = "@" + lastUser.username;
+//document.getElementById("H1").textContent = usernameWithAt;
+  //document.getElementById("P").textContent = usernameWithAt;}
