@@ -11,39 +11,40 @@ document.getElementById("enviarDiv").appendChild(enviarBoton);
 
 
 
-    function comentario() {
-        if(document.getElementById("username").value === '@pokemon'){}
-        else{
-            var textoPublicacion = document.getElementById("username");
+  function comentario() {
+    var storedUsers = JSON.parse(window.localStorage.getItem("users"));
+    var username = document.getElementById("username").value;
+    var correo = document.getElementById("correo").value;
+    var comentario = document.getElementById("Comentario").value;
 
-            textoPublicacion.value = "";
-            alert('Porfavor ingrese un nombre de usuario valido');
-            document.getElementById("Comentario").value = "";
+    var validUser = false;
+
+    if (storedUsers && Array.isArray(storedUsers)) {
+        for (var i = 0; i < storedUsers.length; i++) {
+            var user = storedUsers[i];
+            if (user.username === username && user.mail === correo) {
+                validUser = true;
+                break;
             }
-
-        if(document.getElementById("correo").value ==='usuario@gmail'){}
-        else{
-            var correopubli = document.getElementById("correo");
-
-            correopubli.value = "";
-            alert('Porfavor ingrese un correo electronico valido');
-            document.getElementById("Comentario").value = "";
-            }
-
-
-        if(document.getElementById("username").value === '@pokemon')
-        if(document.getElementById("correo").value ==='usuario@gmail')
-        if(document.getElementById("Comentario").value)
-        {alert('Comentario Enviado')
-        document.getElementById("Comentario").value = "";
-        document.getElementById("correo").value = "";
-        document.getElementById("username").value = "";}
-        else{
-            var comentariopubli = document.getElementById("Comentario");
-
-                comentariopubli.value = "";
-                alert('Porfavor ingrese un comentario');}
+        }
     }
+
+    if (!validUser) {
+        alert("Por favor ingrese un nombre de usuario y correo electrónico válidos.");
+        return;
+    }
+
+    if (!comentario) {
+        alert("Por favor ingrese un comentario.");
+        return;
+    }
+
+    alert("Comentario Enviado");
+
+    document.getElementById("Comentario").value = "";
+    document.getElementById("correo").value = "";
+    document.getElementById("username").value = "";
+}
     function redirectToRegistration() {
         window.location.href = "registrarse.html";
       }
