@@ -1,86 +1,94 @@
-
 const params = new URLSearchParams(window.location.search);
 const id = params.get('id');
-let actualPokemon = []
 
 async function getCharacter() {
-  const data = searchById(id);
-  actualPokemon = data;
-  const type1 = data.types[0].type.name;
-  const type2 = data.types[1] ? data.types[1].type.name : null;
-  const abilities = data.abilities.map(ability => ability.ability.name);
-  const moves = data.moves.slice(0, 15);
-  const types = type2 ? [type1, type2] : [type1];
+  try {
+    const response = await fetch('https://raw.githubusercontent.com/Anascalle/Pokemon-Go/main/js/data1.json');
+    const data = await response.json();
 
-  const character = new Character(
-    data.id,
-    data.name,
-    data.sprites.other["official-artwork"].front_default,
-    types,data.weight,data.height,abilities,
-    data.base_experience,
-    data.stats,
-    moves
-  );
+    const character = searchById(data, id);
 
-  const nameH1 = document.getElementById("name");
-  nameH1.innerHTML = character.name
-
-  const idH1 = document.getElementById("id")
-  idH1.innerHTML = `N°${character.id.toString().padStart(4, '0')}`;
-
-  const typeH1 = document.getElementById('type');
-  typeH1.innerHTML = character.types.join(', ');
-
-  const imageElement = document.getElementById("image");
-  imageElement.src = data.sprites.other["official-artwork"].front_default;
-
-  const weightH1 = document.getElementById("weight");
-  weightH1.innerHTML = `Weight: ${character.weight} kg`;
-
-
-  const heightH1 = document.getElementById("height");
-  heightH1.innerHTML = `Height: ${character.height} m`;
-
-  const abilitiesUL = document.getElementById("abilities");
-  character.abilities.forEach((ability) => {
-    const li = document.createElement("li");
-    li.textContent = ability;
-    abilitiesUL.appendChild(li);
-  });
-
-  const base_experienceH1 = document.getElementById("base_experience");
-  base_experienceH1.innerHTML = `Base experience: ${character.base_experience} `;
-
-  const statsUL = document.getElementById("stats");
-
-  character.stats.forEach((stat) => {
-    const li = document.createElement("li");
-    li.textContent = `${stat.stat.name}: ${stat.base_stat}`;
-    statsUL.appendChild(li);
-  });
-
-  const movesUL = document.getElementById("moves");
-  character.moves.forEach((move) => {
-    const li = document.createElement("li");
-    li.textContent = move.move.name;
-    movesUL.appendChild(li);
-  });
-}
-
-function searchById(id) {
-   for (let i = 0; i < data.length; i++) {
-    var busqueda = `${data [i].id}`
-    if (busqueda === id) {
-        console.log(data[i])
-
-        return data[i]
+    if (!character) {
+      console.log('Personaje no encontrado');
+      return;
     }
-   }
+
+    const type1 = character.types[0].type.name;
+    const type2 = character.types[1] ? character.types[1].type.name : null;
+    const abilities = character.abilities.map(ability => ability.ability.name);
+    const moves = character.moves.map(move => move.move.name);
+
+    const types = type2 ? [type1, type2] : [type1];
+
+    const characterObject = new Character(
+      character.id,
+      character.name,
+      character.sprites.other["official-artwork"].front_default,
+      types,
+      character.weight,
+      character.height,
+      abilities,
+      character.base_experience,
+      character.stats,
+      moves
+    );
+
+    const nameH1 = document.getElementById("name");
+    nameH1.innerHTML = characterObject.name;
+
+    const idH1 = document.getElementById("id");
+    idH1.innerHTML = `N°${characterObject.id.toString().padStart(4, '0')}`;
+
+    const typeH1 = document.getElementById('type');
+    typeH1.innerHTML = characterObject.types.join(', ');
+
+    const imageElement = document.getElementById("image");
+    imageElement.src = characterObject.image;
+
+    const weightH1 = document.getElementById("weight");
+    weightH1.innerHTML = `Weight: ${characterObject.weight} kg`;
+
+    const heightH1 = document.getElementById("height");
+    heightH1.innerHTML = `Height: ${characterObject.height} m`;
+
+    const abilitiesUL = document.getElementById("abilities");
+    abilitiesUL.innerHTML = '';
+    characterObject.abilities.forEach((ability) => {
+      const li = document.createElement("li");
+      li.textContent = ability;
+      abilitiesUL.appendChild(li);
+    });
+
+    const base_experienceH1 = document.getElementById("base_experience");
+    base_experienceH1.innerHTML = `Base experience: ${characterObject.base_experience}`;
+
+    const statsUL = document.getElementById("stats");
+    statsUL.innerHTML = '';
+    characterObject.stats.forEach((stat) => {
+      const li = document.createElement("li");
+      const statName = stat.stat.name;
+      const baseStat = stat.base_stat;
+      li.textContent = `${statName}: ${baseStat}`;
+      statsUL.appendChild(li);
+    });
+
+    const movesUL = document.getElementById("moves");
+    character.moves.slice(0, 15).forEach(move => {
+      const li = document.createElement("li");
+      li.textContent = move.move.name;
+      movesUL.appendChild(li);
+    });
+  } catch (error) {
+    console.log('Error al obtener los datos del personaje:', error);
+  }
 }
+
+function searchById(data, id) {
+  return data.find(character => character.id.toString() === id);
+}
+
 function goBack() {
   window.location.href = 'Pokedex.html';
 }
 
-
-
-getCharacter()
+getCharacter();
