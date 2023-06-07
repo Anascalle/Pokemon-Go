@@ -1,5 +1,6 @@
-const list = [];
+const list = []; 
 const listFav = [];
+
 window.localStorage.setItem("favoriteList", JSON.stringify(listFav));
 
 const listContainer = document.getElementById("container");
@@ -12,31 +13,28 @@ function getList() {
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
-      const results = data;
+      list.length = 0; 
 
-      for (let i = 0; i < results.length; i++) {
-        const data = results[i];
+      for (let i = 0; i < data.length; i++) {
+        const characterData = data[i];
         const types = [];
 
-        if (data.types.length > 0) {
-          types.push(data.types[0].type.name);
+        if (characterData.types.length > 0) {
+          types.push(characterData.types[0].type.name);
 
-          if (data.types.length > 1) {
-            types.push(data.types[1].type.name);
+          if (characterData.types.length > 1) {
+            types.push(characterData.types[1].type.name);
           }
         }
 
-        const character = new Character(data.id, data.name, data.sprites.other["official-artwork"].front_default, types);
+        const character = new Character(characterData.id, characterData.name, characterData.sprites.other["official-artwork"].front_default, types);
         list.push(character);
       }
 
       renderList(list);
-
-      // Guardar los datos en el Local Storage
-      localStorage.setItem('pokemonData', JSON.stringify(list));
     })
     .catch(error => {
-      console.log('Error al obtener los datos:', error);
+      console.log('Error retrieving data:', error);
     });
 }
 
@@ -48,7 +46,7 @@ function renderList(characters) {
     const cardElement = document.createElement("div");
     cardElement.className = "card";
     cardElement.innerHTML = character.toHtml(i);
-    cardElement.addEventListener("click", () => selected(character.id)); // Modificado aquí
+    cardElement.addEventListener("click", () => selected(character.id));
     listContainer.appendChild(cardElement);
   }
 }
@@ -61,8 +59,8 @@ function selected(id) {
 }
 
 function searchCharacter() {
-  const searchValue = searchInput.value.toLowerCase();
-  const filteredList = list.filter(character => character.name.toLowerCase().includes(searchValue));
+  const inputValue = searchInput.value.toLowerCase();
+  const filteredList = list.filter(character => character.name.toLowerCase().includes(inputValue));
 
   if (filteredList.length > 0) {
     renderList(filteredList);
