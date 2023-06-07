@@ -135,6 +135,6 @@ let user = {
 users.push(user)
 let JSONUser = JSON.stringify(users)
 window.localStorage.setItem("users", JSONUser)
-    window.location.href = "./Pokedex.html";
+    window.location.href = "./iniciarsesion.html";
   }
 });
