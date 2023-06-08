@@ -1,35 +1,56 @@
-const results = JSON.parse(window.localStorage.getItem("favoritos"));
-const list = [];
-const listContainer = document.getElementById("container");
+function searchCharacter() {
+  const inputValue = searchInput.value.toLowerCase();
+  const filteredList = list.filter(character => character.name.toLowerCase().includes(inputValue));
 
-function getList() {
-  for (let i = 0; i < results.length; i++) {
-    const data = results[i];
-    const types = [];
-
-    if (data.types.length > 0) {
-      types.push(data.types[0].type.name);
-
-      if (data.types.length > 1) {
-        types.push(data.types[1].type.name);
-      }
-    }
-
-    const character = new Character(data.id, data.name, data.sprites.other["official-artwork"].front_default, types);
-    list.push(character);
-  }
-
-  for (let i = 0; i < list.length; i++) {
-    const character = list[i];
-    listContainer.innerHTML += character.toHtml(i);
+  if (filteredList.length > 0) {
+    renderList(filteredList);
+    noResultsMessage.classList.add("hidden");
+  } else {
+    listContainer.innerHTML = "";
+    noResultsMessage.classList.remove("hidden");
   }
 }
 
-function selected(pos) {
-  const character = list[pos];
-  window.location.href = `./detail.html?id=${character.id}`;
+searchInput.addEventListener("input", searchCharacter);
+
+function displayFavoritePokemons() {
+  const favoriteList = localStorage.getItem('favoriteList');
+  
+  if (favoriteList === null) {
+    console.log('No hay pokémones favoritos almacenados.');
+    return;
+  }
+  
+  const parsedList = JSON.parse(favoriteList);
+  
+  searchCharacter(); // Aplica la función de búsqueda inicialmente
+  
+  function renderList(pokemons) {
+    // Limpia el contenido previo del contenedor
+    listContainer.innerHTML = '';
+    
+    pokemons.forEach((pokemon, index) => {
+      // Crea un elemento HTML para cada pokémon
+      const pokemonElement = document.createElement('div');
+      pokemonElement.textContent = pokemon.name;
+      
+      // Agrega el pokémon al contenedor
+      listContainer.appendChild(pokemonElement);
+      
+      // Asocia el evento de clic al pokémon para redirigir a la página de detalles
+      pokemonElement.addEventListener('click', () => {
+        selected(index);
+      });
+    });
+  }
+  
+  function selected(pos) {
+    const character = parsedList[pos];
+    window.location.href = `./detail.html?id=${character.id}`;
+  }
 }
+
+// Llama a la función para mostrar los pokémones favoritos en pantalla al cargar la página
+displayFavoritePokemons();
 
 getList();
-
-console.log(results)
