@@ -293,6 +293,16 @@
           display:none
   }
 
+.faov{
+    background-color: #3B4CCA;
+    color: white;
+    border-radius: 30PX;
+    box-shadow: none;
+    font-family: poppins;
+    width:180px;
+    height: 50px;
+
+  }
 
 
 
